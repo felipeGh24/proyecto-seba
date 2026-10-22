@@ -1,0 +1,12 @@
+/* Paleta y escala de diseño · tokens para nuevos componentes.
+   Las pantallas existentes conservan su CSS para evitar regresiones visuales. */
+:root {
+  --voltage-ink: #111111;
+  --voltage-turquoise: #00A6A4;
+  --voltage-surface: #FFFFFF;
+  --voltage-soft: #F4F4F1;
+  --voltage-border: #DFE5E6;
+  --voltage-danger: #B42318;
+  --voltage-warning: #956100;
+  --voltage-success: #147D55;
+}

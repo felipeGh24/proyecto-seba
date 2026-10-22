@@ -1,0 +1,67 @@
+/* V4 - oficina clara, alta legibilidad y semáforos de alto contraste */
+:root[data-theme="light"]{
+ --bg:#ffffff;--surface:#fff;--surface-2:#f8fafb;--line:#e0e6e8;
+ --fg:#14252b;--muted:#586b72;--primary:#008f91;--primary-strong:#006f73;
+ --good:#08794e;--warn:#9b6307;--bad:#b82e2d;--info:#006f9a;
+}
+html,body{background:#fff!important;color:#172e33}
+.app{background:white;grid-template-columns:254px minmax(0,1fr)}
+.side,.side:where(*){background:#fff;color:#283b40;border-right:1px solid #e3e8ea}
+.side{box-shadow:2px 0 9px rgba(40,60,70,.018);padding:27px 14px 20px}
+.side .product-identity{border-bottom:1px solid #e9edef;padding:1px 9px 22px;margin-bottom:18px}
+.product-identity strong{color:#172a2f!important;font-weight:850}.product-identity strong em{color:#009b9b}
+.product-identity small{color:#667e83!important;font-size:10.5px}
+.electric-mark{background:#00a6a4!important;color:#fff!important;border-radius:9px}
+.nav-heading{color:#7b9094!important;font-weight:800;letter-spacing:.11em;margin-top:8px}
+.nav-heading.inset{margin-top:23px}
+.nav button,.nav button[aria-current="false"]{color:#41545b!important;background:transparent!important;font-size:12.5px;padding:11px 13px;border:1px solid transparent;border-radius:7px}
+.nav button:hover,.nav button[aria-current="false"]:hover{background:#f0f8f8!important;color:#006f73!important}
+.nav button[aria-current="page"],.nav button[aria-current="true"]{background:#e6f6f5!important;color:#006b70!important;border-color:#d6edeb!important;box-shadow:inset 3px 0 #00a6a4;font-weight:800}
+.nav-ic{color:#82959a!important}.nav button[aria-current="true"] .nav-ic{color:#008d90!important}
+.nav .cnt{background:#f4e1db;color:#963a2c}
+.side-foot{border-top:1px solid #e9edef;color:#697f82;margin-top:auto}
+.side-foot small{color:#829094}.side-foot .dot{background:#0caa92}
+.app main{background:#fff;padding-top:26px;max-width:1490px}
+.app-meta{border-bottom:1px solid #edf0f1;padding-bottom:14px;height:auto;margin-bottom:25px;color:#667d83;font-size:9.8px}
+h1{color:#142c31!important;font-size:clamp(25px,2.4vw,34px)}
+.eyebrow,.v3-kicker,.overline{color:#008b89}
+.subtitle{color:#637780;max-width:680px}
+.v3-kpis{border-color:#e0e7e9;box-shadow:0 5px 16px rgba(23,51,60,.028)}
+.v3-kpi{background:#fff;padding:23px 22px;border-color:#e0e7e9}
+.v3-kpi:hover{background:#f7fcfb}
+.v3-kpi>span{color:#526a72}.v3-kpi>strong{color:#162f35}.v3-kpi>small{color:#63777e}
+.v3-micro-strip{background:#fff;border-color:#e0e7e9}.v3-micro-strip button{background:#fff;border-color:#e0e7e9}.v3-micro-strip button:hover{background:#f4faf9}
+.v3-micro-strip span{color:#536d72}
+.v3-sheet,.v2-paper,.card,.workspace-block,.v3-data-controls,.v4-export-area{background:#fff;border:1px solid #dfe7e9;border-radius:9px;box-shadow:0 4px 17px rgba(22,47,55,.025)}
+.v3-sheet{padding:24px}.v3-sheet h2{color:#1f353a}
+.v3-bars i{background:#00a6a4}.v3-bars i+i{background:#b9cace}
+.v3-chart-legend i{background:#00a6a4}.v3-chart-legend span+span i{background:#b9cace}
+.v3-pipeline button{background:#fff}.v3-pipeline button:hover{background:#f3faf9}
+.v3-project-list button:hover,.v3-priorities button:hover{background:#f5faf9}
+.v3-status.negative{background:#ffe1dc;color:#a32925;border:1px solid #f4a7a0}
+.v3-status.warning{background:#fff0ba;color:#7d5100;border:1px solid #e8c56e}
+.v3-status.positive{background:#d9f6e4;color:#0b673f;border:1px solid #8bd6ac}
+.v3-project-bar{height:8px;background:#e0e8e9}.v3-project-bar i{background:#00a6a4}
+.v3-project-bar em{background:#b34c2d;height:14px;top:-3px}
+/* Semáforo: manchas sólidas grandes con anillo visible en fondo blanco. */
+.sema{width:15px!important;height:15px!important;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 2px currentColor,0 1px 4px rgba(0,0,0,.1);vertical-align:middle;margin:0 5px 0 2px}
+.sema.sem-red{background:#e32f32!important;color:#c3292b}.sema.sem-yellow{background:#ffba17!important;color:#a87300}.sema.sem-green{background:#0baa67!important;color:#087d4f}.sema.sem-blue{background:#1687cf!important;color:#006f9a}
+.kanban-head .sema,.v2-pipeline-title .sema{margin-right:6px}
+.pill.good,.integration-state.good{background:#d9f5e6;color:#0a673f}.pill.warn,.integration-state.warn{background:#fff0c2;color:#7e5708}.pill.bad{background:#ffdfdd;color:#a62824}.pill.info{background:#e0f3fc;color:#006991}
+.btn{border-radius:7px}.btn.ghost{background:#fff;color:#00747b;border-color:#b9d5d7}.btn.ghost:hover{background:#ecf7f6;color:#005c60}
+.tbl th{background:#f3f7f8;color:#566d74}.tbl tbody tr:nth-child(even){background:#fcfdfd}
+.inp{border-color:#bacbd0}
+.v4-export-area{margin-bottom:21px;padding:24px 26px}
+.v4-report-title{display:flex;align-items:start;justify-content:space-between;gap:20px;padding-bottom:19px;border-bottom:1px solid #e8eef0}
+.v4-report-title h2{font-size:21px;letter-spacing:-.035em;margin:7px 0}.v4-report-title p{font-size:12px;color:#60757b;line-height:1.65;max-width:680px}
+.v4-tag{white-space:nowrap;background:#e1f6f3;color:#007875;padding:8px 10px;border-radius:4px;font-size:10px;font-weight:800;letter-spacing:.05em}
+.v4-export-controls{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:end;padding:16px 0;border-bottom:1px solid #edf1f2}
+.v4-export-controls label{display:grid;gap:7px;color:#476169;font-weight:700;font-size:11.5px}
+.v4-export-controls select{width:100%;max-width:630px;padding:11px 14px;background:#fff;border:1px solid #bdcfd2;border-radius:6px;color:#172b31;font-size:12px;min-height:42px}
+.v4-export-controls .btn{white-space:nowrap;min-height:42px}
+.v4-export-note{font-size:11px;color:#64777d;line-height:1.7;margin-top:15px;max-width:900px}
+.v4-report-divider{display:flex;justify-content:space-between;gap:8px;margin:26px 0 14px;color:#738990;letter-spacing:.08em;font-weight:700;font-size:10px}
+.v4-pj-pdf{white-space:nowrap}
+@media(max-width:980px){.app{grid-template-columns:210px minmax(0,1fr)}}
+@media(max-width:760px){.side{border-right:0;border-bottom:1px solid #e3e8ea!important;box-shadow:none}.v4-report-title{flex-direction:column}.v4-export-controls{grid-template-columns:1fr}.v4-export-controls select{max-width:none}.v4-export-controls .btn{width:100%}.v4-export-area{padding:17px}.v4-tag{align-self:start}.v4-report-divider{display:block}}
+@media print{.side,.app-meta,.actions{display:none!important}.app{display:block}.app main{padding:0}}

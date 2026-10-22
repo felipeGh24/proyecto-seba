@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<meta name="description" content="Gestión comercial y control de proyectos para empresas constructoras. Prototipo local de demostración.">
+<title>Voltage Obras | Gestión empresarial V8</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/app.css">
+</head>
+<body>
+<div class="app">
+<aside class="side">
+ <div class="product-identity"><div class="electric-mark">V</div><div><strong>VOLTAGE <em>OBRAS</em></strong><small>Control de obras, facturación y seguimiento</small></div></div>
+ 
+ <div class="nav-heading">VISTA GENERAL</div>
+ <nav aria-label="Secciones" class="nav" id="nav">
+  <button aria-current="page" data-go="panel"><span class="nav-ic">▦</span><span>Inicio</span></button>
+  <button data-go="flujo"><span class="nav-ic">◇</span><span>Trazabilidad</span></button>
+  <div class="nav-heading inset">GESTIÓN COMERCIAL</div>
+  <button data-go="cotizaciones"><span class="nav-ic">▤</span><span>Cotizaciones</span></button>
+  <button data-go="facturas"><span class="nav-ic">▥</span><span>Facturas y cobros</span></button>
+  <button data-go="tributario"><span class="nav-ic">▣</span><span>Preparación SII</span></button>
+  <div class="nav-heading inset">OPERACIONES</div>
+  <button data-go="proyectos"><span class="nav-ic">▧</span><span>Proyectos y Gantt</span></button>
+  <button data-go="clientes"><span class="nav-ic">♙</span><span>Clientes</span></button>
+  <button data-go="costos"><span class="nav-ic">◫</span><span>Costos y margen</span></button>
+  <button data-go="reportes"><span class="nav-ic">▥</span><span>Informes de gestión</span></button>
+  <div class="nav-heading inset">ADMINISTRACIÓN</div>
+  <button data-go="integraciones"><span class="nav-ic">⌘</span><span>Integraciones</span></button>
+  <button data-go="config"><span class="nav-ic">⚙</span><span>Configuración empresa</span></button>
+ </nav>
+ <div class="side-foot"><div id="conn"><span class="dot off"></span>Preparando sesión</div><small>Versión ejecutable local. Puedes respaldar y publicar esta aplicación en Vercel.</small></div>
+</aside>
+<main>
+<header class="v6-topbar"><div class="v6-top-title"><strong id="v5-current">Inicio</strong><span>Panel principal</span></div><div class="v6-top-actions"><button type="button" id="v6-notif-trigger" class="v6-notif-trigger" aria-expanded="false" aria-label="Abrir notificaciones" title="Notificaciones"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/></svg><b id="v6-notif-count" hidden>0</b></button></div><div class="v6-notif-menu" id="v6-notif-menu" hidden></div></header>
+<section id="v-panel"><div class="loading">Preparando panel ejecutivo…</div></section>
+<section hidden id="v-flujo"></section>
+<section hidden id="v-cotizaciones"></section>
+<section hidden id="v-facturas"></section>
+<section hidden id="v-tributario"></section>
+<section hidden id="v-proyectos"></section>
+<section hidden id="v-clientes"></section>
+<section hidden id="v-costos"></section>
+<section hidden id="v-reportes"></section>
+<section hidden id="v-integraciones"></section>
+<section hidden id="v-config"></section>
+<section hidden id="v-editor"></section>
+</main>
+</div>
+<div id="modal-root"></div><div aria-live="polite" class="toast" hidden id="toast" role="status"></div>
+<datalist id="units"><option value="un"><option value="gl"><option value="m"><option value="m2"><option value="m3"><option value="ml"><option value="kg"><option value="hr"><option value="día"><option value="mes"><option value="pto"><option value="C/U"><option value="MT"></datalist>
+<script src="./assets/demo-data.js"></script>
+<script src="./assets/local-adapter.js"></script>
+<script src="./assets/pdf-fallback.js"></script>
+<script src="./assets/report-pdf.js"></script>
+<script src="./assets/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+</body></html>

@@ -1,0 +1,12 @@
+{
+  "name": "voltage-obras",
+  "private": true,
+  "version": "8.0.0",
+  "type": "module",
+  "description": "Prototipo web local modular de control de obras · UX V8",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "npm run build && npm test"
+  }
+}

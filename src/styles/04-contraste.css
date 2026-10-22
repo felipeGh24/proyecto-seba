@@ -1,0 +1,120 @@
+/* SEBA GESTIÓN V5 · Panel lateral Voltage oscuro + espacio operativo blanco.
+   Capa de contraste: se aplica al final para evitar heredar tonos azules o texto ilegible. */
+:root[data-theme="light"]{
+  --bg:#fff; --surface:#fff; --surface-2:#f7faf9;
+  --fg:#172b31; --muted:#526870; --line:#dce5e7;
+  --primary:#008b8b; --primary-strong:#006e72; --link:#007276;
+  --primary-soft:#d9f3f0;
+  color-scheme:light;
+}
+html,body{background:#fff!important;color:#172b31}
+.app{background:linear-gradient(90deg,#141a1b 0 254px,#fff 254px 100%)!important}
+.app main{background:#fff!important;color:#172b31!important;min-width:0}
+/* Restauración fiel del menú oscuro de las primeras versiones. */
+.app .side{
+  background:#141a1b!important;
+  color:#d9e6e5!important;
+  border:0!important;
+  border-right:1px solid #283938!important;
+  box-shadow:4px 0 17px rgba(13,34,35,.12)!important;
+}
+.side .product-identity{border-bottom:1px solid #2b3838!important}
+.side .product-identity strong{color:#f6fcfa!important}
+.side .product-identity strong em{color:#22cbc2!important}
+.side .product-identity small{color:#9fb1b0!important}
+.side .electric-mark{background:linear-gradient(145deg,#00a6a4,#007980)!important;color:#fff!important}
+.side .nav-heading,.side .nav-heading.inset{color:#95a9a7!important}
+.side .nav button,.side .nav button[aria-current="false"]{
+  color:#d0dcdb!important;
+  background:transparent!important;
+  border:1px solid transparent!important;
+  box-shadow:none!important;
+  opacity:1!important;
+}
+.side .nav button .nav-ic{color:#a0b6b2!important}
+.side .nav button:hover,.side .nav button[aria-current="false"]:hover{
+  background:#25383a!important;color:#fff!important;border-color:#314e4e!important;
+}
+.side .nav button:hover .nav-ic{color:#8cebe0!important}
+.side .nav button[aria-current="true"],.side .nav button[aria-current="page"]{
+  background:#244745!important;
+  color:#f4fffd!important;
+  border-color:#356764!important;
+  border-left:3px solid #25e2d0!important;
+  box-shadow:none!important;
+  font-weight:800!important;
+}
+.side .nav button[aria-current="true"] .nav-ic,.side .nav button[aria-current="page"] .nav-ic{color:#66f4e6!important}
+.side .nav .cnt{background:#245657!important;color:#e8fffa!important}
+.side .nav .cnt.bad{background:#7b3230!important;color:#ffe9e6!important}
+.side .side-foot{border-top:1px solid #2c3939!important;color:#b9cbca!important}
+.side .side-foot small{color:#a5b7b5!important}
+.side .side-foot .dot{background:#21bd9b!important}
+.side .side-foot .dot.off{background:#e07d70!important}
+/* Selecciones legibles en todos los módulos, no solamente en Inicio. */
+main .chip[aria-pressed="true"],main .seg button[aria-pressed="true"],.dlg .chip[aria-pressed="true"],.dlg .seg button[aria-pressed="true"],main button[aria-selected="true"],
+main button[role="tab"][aria-selected="true"],main button[data-selected="true"]{
+  background:#d4f3ed!important;color:#075d5d!important;
+  border-color:#72c8bb!important;box-shadow:inset 0 -2px #008b82!important;
+  opacity:1!important;
+}
+main .chip[aria-pressed="true"] *,main .seg button[aria-pressed="true"] *,main button[aria-selected="true"] *, .dlg .chip[aria-pressed="true"] *{
+ color:inherit!important;
+}
+main .chip[aria-pressed="false"],main .seg button[aria-pressed="false"]{
+  background:#fff!important;color:#37525a!important;border-color:#ccdadc!important;
+}
+main .chip:not([aria-pressed="true"]):hover,main .seg button:not([aria-pressed="true"]):hover{
+ background:#eef8f6!important;color:#075e61!important;
+}
+main input,main select,main textarea,.dlg input,.dlg select,.dlg textarea{
+ color:#182f35!important;background-color:#fff!important;
+ border-color:#a9bfc2!important;accent-color:#008b84;
+}
+main input::placeholder,main textarea::placeholder,.dlg input::placeholder,.dlg textarea::placeholder{color:#667b80!important;opacity:1}
+main select option,.dlg select option{background-color:#fff!important;color:#172c32!important}
+main select option:checked,.dlg select option:checked{background:#d4f3ed!important;color:#075d5d!important}
+main input:focus,main select:focus,main textarea:focus,.dlg input:focus,.dlg select:focus,.dlg textarea:focus{
+ outline:2px solid #158d8a!important;outline-offset:1px;border-color:#007d81!important;
+ box-shadow:0 0 0 3px rgba(0,166,164,.1)!important;
+}
+main a,main .text-btn,main .cell-link{color:#006e75}
+main a:hover,main .text-btn:hover,main .cell-link:hover{color:#004e51}
+main .btn:not(.ghost):not(.danger){background:#007f83!important;color:#fff!important;border-color:#007f83!important}
+main .btn:not(.ghost):not(.danger):hover{background:#006469!important;color:#fff!important}
+main .btn.ghost{background:#fff!important;color:#075e63!important;border-color:#a9cccb!important}
+main .btn.ghost:hover{background:#e7f6f3!important;color:#064f52!important}
+main .btn.danger{color:#aa302c!important;border-color:#e0aaa3!important;background:#fff!important}
+main .btn:disabled{opacity:.52!important}
+main .tbl td,main .tbl th{color:#283e44}
+main .tbl th{background:#f4f8f8;color:#4c6168}
+main .tbl tbody tr:hover td{background:#f0f9f6}
+main .v3-pipeline button:focus-visible,main .v3-micro-strip button:focus-visible{outline:3px solid #008e88;outline-offset:-3px}
+main .v3-kpi,main .v3-sheet,main .v2-paper{background:#fff}
+main ::selection,.dlg ::selection{background:#c4eee8;color:#063b3c}
+.side ::selection{background:#188b83;color:#fff}
+/* Panel oscuro a toda altura, incluso si el contenido ocupa varias pantallas. */
+@media (min-width:761px) and (max-width:980px){.app{background:linear-gradient(90deg,#141a1b 0 210px,#fff 210px 100%)!important}}
+@media (max-width:760px){.app{background:#fff!important}}
+/* Regreso y ubicación: visibles permanentemente en cada módulo. */
+.app-meta{align-items:center!important;min-height:48px;height:auto!important;flex-wrap:wrap;row-gap:8px!important}
+.v5-backbar{display:flex;align-items:center;gap:9px;margin-left:auto}
+.v5-backbar button{
+ background:#fff;color:#075d63;border:1px solid #b6d1d1;padding:7px 12px;
+ border-radius:7px;font-size:11px;font-weight:750;letter-spacing:0;min-height:32px;
+}
+.v5-backbar button:hover:not(:disabled){background:#e7f6f3;color:#034b4c}
+.v5-backbar button:disabled{opacity:.45;cursor:default}
+.v5-backbar button:focus-visible,.side .nav button:focus-visible{
+ outline:3px solid #31d2c4;outline-offset:2px;
+}
+.v5-backbar .v5-home{background:#daf3ed;color:#075e60}
+.v5-backbar .v5-current{font-size:10px;color:#637b80;font-weight:700;margin-right:5px}
+@media(max-width:760px){
+ .app .side{border-right:0!important;border-bottom:1px solid #354747!important;box-shadow:none!important}
+ .v5-backbar{width:100%;justify-content:flex-start;margin:4px 0 0;flex-wrap:wrap}
+ .v5-backbar .v5-current{flex:1;min-width:85px}
+ .v5-backbar button{min-height:37px}
+ .app-meta .demo-top{font-size:8px}
+}
+@media print{.v5-backbar{display:none!important}}

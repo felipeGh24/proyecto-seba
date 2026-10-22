@@ -1,0 +1,57 @@
+{
+  "name": "Voltage Obras",
+  "version": "8.0.0",
+  "entry": "template/index.html",
+  "styles": [
+    "styles/00-tokens.css",
+    "styles/01-base.css",
+    "styles/02-voltage.css",
+    "styles/03-oficina.css",
+    "styles/04-contraste.css",
+    "styles/05-notificaciones.css"
+  ],
+  "scripts": [
+    "core/formatters.js",
+    "domain/rut-y-texto.js",
+    "core/store.js",
+    "domain/documentos.js",
+    "ui/dialogos.js",
+    "infrastructure/repository.js",
+    "app/router.js",
+    "features/inicio/panel.js",
+    "features/documentos/listados.js",
+    "features/clientes/clientes.js",
+    "features/empresa/configuracion.js",
+    "features/documentos/editor.js",
+    "features/cotizaciones/propuestas.js",
+    "features/documentos/acciones.js",
+    "features/documentos/pdf-comercial.js",
+    "features/proyectos/gantt.js",
+    "app/events.js",
+    "features/trazabilidad/flujo-original.js",
+    "features/inicio/metricas-y-reportes.js",
+    "features/costos/costos.js",
+    "features/ui/contexto-secciones.js",
+    "features/tributario/preparacion-y-avisos.js",
+    "app/bootstrap.js",
+    "features/reportes/informes-pdf.js"
+  ],
+  "adapters": [
+    {
+      "src": "fixtures/demo-data.js",
+      "dist": "demo-data.js"
+    },
+    {
+      "src": "infrastructure/local-adapter.js",
+      "dist": "local-adapter.js"
+    },
+    {
+      "src": "reports/pdf-fallback.js",
+      "dist": "pdf-fallback.js"
+    },
+    {
+      "src": "reports/report-pdf.js",
+      "dist": "report-pdf.js"
+    }
+  ]
+}
